@@ -182,21 +182,27 @@ body {
 	background:url(images/bg.png) repeat scroll 0 0;
 }
 header{
+	position:fixed;
+	left:0;
+	top:0;
 	width:100%;
+	z-index:2;
 	background:#ffffff;
 }
 
-#header{
+#header{	
 	width:1260px;
 	height:74px;	
-	margin:0 auto;
+	margin:0 auto;	
 	
 }
 
 
 #main{
+	
 	width:1260px;
-	margin:0 auto;
+	margin:74px auto 0 auto;
+	z-index:1;
 }
 
 
@@ -245,17 +251,38 @@ nav li a:hover{
 .block{
 	position:relative;
 }
-
+.block h2{
+	position:absolute;
+	text-indent:-9999px;
+}
 .banner-block{
 	width:1260px;
 	height:597px;
 	background:url(images/banner.png) no-repeat scroll 0 0;
 }
 
+
+
 .home-post{
 	height:797px;
 	padding-top:12px;
 	background:#697e9c url(images/block1.png) repeat-x scroll 0 0;
+}
+.home-post h2{ 
+	left:147px;
+    top:80px;   
+    width:208px;
+    height:82px;    
+    background:url(images/blog-title.png) no-repeat scroll 0 0;
+}
+.home-post .home-post-pic{
+	position:absolute;
+	left:104px;
+	top:414px;
+	width:280px;
+	height:321px;
+	background:url(images/blog-bg.png) no-repeat scroll 0 0;
+	
 }
 
 .home-download{
@@ -263,8 +290,58 @@ nav li a:hover{
 	padding-top:12px;
 	background:#729f64 url(images/block2.png) repeat-x scroll 0 0;
 }
+.home-download h2{
+	left:140px;
+	top:78px;
+	width:359px;
+	height:82px;
+	background:url(images/download-title.png) no-repeat scroll 0 0;
+}
+.home-download .home-download-icon{
+	position:absolute;
+	left:154px;
+	top:257px;
+	width:558px;
+	height:253px;
+	background:url(images/download-icon.png) no-repeat scroll 0 0;
+}
+.home-download .home-download-pic{
+	position:absolute;
+	left:748px;
+	top:88px;
+	width:295px;
+	height:280px;
+	background:url(images/download-pic.png) no-repeat scroll 0 0;
+	
+}
+
 .home-platform{
 	height:694px;
 	padding-top:12px;
 	background:#d3a56d url(images/block3.png) repeat-x scroll 0 0;
+}
+.home-platform h2{
+	left:146px;
+	top:80px;
+	width:284px;
+	height:82px;
+	background:url(images/platform-title.png) no-repeat scroll 0 0;
+}
+.home-platform .download-list{
+	position:absolute;
+	left:80px;
+	top:203px;
+	width:650px;
+	
+	
+}
+.home-platform .download-list li{
+	display:inline;
+	float:left;
+	width:200px;
+	height:140px;
+	padding:26px 22px 28px 25px;
+	margin:20px 0 0 77px;
+	background:url(images/li_bg.png) no-repeat scroll 0 0;
+	
 }

@@ -18,21 +18,42 @@ get_header(); // Loads the header.php template. ?>
 		
 		
 		    <div class="block home-post">
-		       
+		        <h2>1.博文</h2>
+		        <div class="block-c">
+		           <div class="home-post-pic"></div>
+		        
+		        </div>
 		    
 		    </div>
 		    
 		    <div class="block home-download">
-		    
+		        <h2>2.资料下载</h2>
+		        <div class="block-c">
+		          <div class="home-download-icon"></div>
+		          <div class="home-download-pic"></div>
+		          
+		        
+		        </div>
 		    </div>
 		    
 		    <div class="block home-platform">
-		    
+		        <h2>3.平台化</h2>
+		        <div class="block-c">
+		            <ul class="download-list">
+		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>
+		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>
+		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>
+		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>
+		            
+		            </ul>
+		        
+		        
+		        </div>
 		    
 		    </div>
 		    
 		    <div class="block home-team">
-		    
+		       <h2>4.团队</h2>
 		    
 		    </div>
 				
