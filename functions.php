@@ -40,7 +40,7 @@ function origin_theme_setup() {
 	add_theme_support( 'loop-pagination' );
 	add_theme_support( 'get-the-image' );
 	add_theme_support( 'cleaner-gallery' );
- 	add_theme_support( 'breadcrumb-trail' );
+	add_theme_support( 'breadcrumb-trail' );
 
 	/* Add theme support for WordPress features. */
 	add_theme_support( 'automatic-feed-links' );
@@ -258,24 +258,24 @@ function origin_commentform_args( $args ) {
 	
 	
 	$fields = array(
-		'author' => '<p class="form-author' . $input_class . '"><input type="text" class="text-input" name="author" id="author" value="' . esc_attr( $commenter['comment_author'] ) . '" size="40" placeholder="输入昵称"/><!--<label for="author">' . __( '输入昵称', $domain ). '</label>--></p>'//,
-		//'email' => '<p class="form-email' . $input_class . '"><input type="text" class="text-input" name="email" id="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="40" /><label for="email">' . __( '输入评论邮箱', $domain ). '</label></p>'//,
+		'author' => '<p class="form-author' . $input_class . '"><input type="text" class="text-input" name="author" id="author" value="' . esc_attr( $commenter['comment_author'] ) . '" size="40" /><label for="author">' . __( '昵称', $domain ). '</label></p>',
+		'email' => '<p class="form-email' . $input_class . '"><input type="text" class="text-input" name="email" id="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="40" /><label for="email">' . __( '邮箱', $domain ). '</label></p>'//,
 		//'url' => '<p class="form-url"><input type="text" class="text-input" name="url" id="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="40" /><label for="url">' . __( 'Website', $domain ) . '</label></p>'
 	);
 	
 	$args = array(
 		'fields' => apply_filters( 'comment_form_default_fields', $fields ),
-		'comment_field' => '<p class="form-textarea req"><!--<label for="comment">' . __( '输入评论', $domain ) . '</label>--><textarea name="comment" id="comment" cols="60" rows="10" placeholder="输入评论"></textarea></p>',
+		'comment_field' => '<p class="form-textarea req"><!--<label for="comment">' . __( 'Comment', $domain ) . '</label>--><textarea name="comment" id="comment" cols="60" rows="10"></textarea></p>',
 		'must_log_in' => '<p class="alert">' . sprintf( __( 'You must be <a href="%1$s" title="Log in">logged in</a> to post a comment.', $domain ), wp_login_url( get_permalink() ) ) . '</p><!-- .alert -->',
 		'logged_in_as' => '<p class="log-in-out">' . sprintf( __( 'Logged in as <a href="%1$s" title="%2$s">%2$s</a>.', $domain ), admin_url( 'profile.php' ), esc_attr( $user_identity ) ) . ' <a href="' . wp_logout_url( get_permalink() ) . '" title="' . esc_attr__( 'Log out of this account', $domain ) . '">' . __( 'Log out &rarr;', $domain ) . '</a></p><!-- .log-in-out -->',
-		'comment_notes_before' => '<div class="post-comment-form">',
-		'comment_notes_after' => '</div>',
+		'comment_notes_before' => '',
+		'comment_notes_after' => '',
 		'id_form' => 'commentform',
 		'id_submit' => 'submit',
-	//	'title_reply' => __( '说点什么...', $domain ),
+		'title_reply' => __( '说点什么...', $domain ),
 		'title_reply_to' => __( 'Leave a Reply to %s', $domain ),
 		'cancel_reply_link' => __( 'Click here to cancel reply.', $domain ),
-		'label_submit' => __( '发布评论', $domain ),
+		'label_submit' => __( '发布', $domain ),
 	);
 	
 	return $args;

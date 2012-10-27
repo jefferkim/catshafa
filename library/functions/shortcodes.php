@@ -55,23 +55,13 @@ function hybrid_add_shortcodes() {
 	add_shortcode( 'entry-terms', 'hybrid_entry_terms_shortcode' );
 	add_shortcode( 'entry-comments-link', 'hybrid_entry_comments_link_shortcode' );
 	add_shortcode( 'entry-published', 'hybrid_entry_published_shortcode' );
-	
-	add_shortcode('entry-views', 'hybrid_entry_views');
-	
 	add_shortcode( 'entry-edit-link', 'hybrid_entry_edit_link_shortcode' );
 	add_shortcode( 'entry-shortlink', 'hybrid_entry_shortlink_shortcode' );
 	add_shortcode( 'entry-permalink', 'hybrid_entry_permalink_shortcode' );
 	add_shortcode( 'post-format-link', 'hybrid_post_format_link_shortcode' );
 
-	/*增加文章查看次数*/
-//	add_shortcode('entry-view-times', 'hybrid_post_view_times_shortcode');
-	
-	
 	/* Add comment-specific shortcodes. */
 	add_shortcode( 'comment-published', 'hybrid_comment_published_shortcode' );
-	
-	add_shortcode( 'comment-block-published', 'hybrid_comment_block_published_shortcode' );
-	
 	add_shortcode( 'comment-author', 'hybrid_comment_author_shortcode' );
 	add_shortcode( 'comment-edit-link', 'hybrid_comment_edit_link_shortcode' );
 	add_shortcode( 'comment-reply-link', 'hybrid_comment_reply_link_shortcode' );
@@ -236,21 +226,10 @@ function hybrid_entry_edit_link_shortcode( $attr ) {
 function hybrid_entry_published_shortcode( $attr ) {
 	$attr = shortcode_atts( array( 'before' => '', 'after' => '', 'format' => get_option( 'date_format' ) ), $attr );
 
-	$published = '<span class="published" title="' . sprintf( get_the_time( esc_attr__( 'l, F jS, Y, g:i a', 'hybrid-core' ) ) ) . '">' . sprintf( get_the_time( $attr['format'] ) ) . '</span>';
+	$published = '<abbr class="published" title="' . sprintf( get_the_time( esc_attr__( 'l, F jS, Y, g:i a', 'hybrid-core' ) ) ) . '">' . sprintf( get_the_time( $attr['format'] ) ) . '</abbr>';
 	return $attr['before'] . $published . $attr['after'];
 }
 
-/*
- * 显示文章阅读数
- * 
- * */
-
-function hybrid_entry_views($attr){
-	if(function_exists('the_views')){
-		$views = the_views();
-		return "<div class='fff'>". $views ."</div>";		
-	}	
-}
 /**
  * Displays a post's number of comments wrapped in a link to the comments area.
  *
@@ -263,7 +242,7 @@ function hybrid_entry_comments_link_shortcode( $attr ) {
 
 	$comments_link = '';
 	$number = doubleval( get_comments_number() );
-	$attr = shortcode_atts( array( 'zero' => __( '0 comment', 'hybrid-core' ), 'one' => __( '%1$s Comment', 'hybrid-core' ), 'more' => __( '%1$s Comments', 'hybrid-core' ), 'css_class' => 'comments-link', 'none' => 'comments-link', 'before' => '', 'after' => '' ), $attr );
+	$attr = shortcode_atts( array( 'zero' => __( '去评论', 'hybrid-core' ), 'one' => __( '%1$s', 'hybrid-core' ), 'more' => __( '%1$s', 'hybrid-core' ), 'css_class' => 'comments-link', 'none' => '', 'before' => '', 'after' => '' ), $attr );
 
 	if ( 0 == $number && !comments_open() && !pings_open() ) {
 		if ( $attr['none'] )
@@ -439,11 +418,6 @@ function hybrid_comment_published_shortcode() {
 	return $link;
 }
 
-
-function hybrid_comment_block_published_shortcode() {
-	$link = sprintf( '<span class="comment-date" title="' . get_comment_date( esc_attr__( 'l, F jS, Y, g:i a', 'hybrid-core' ) ) . '">' . get_comment_date(esc_attr__( 'Y.n.j', 'hybrid-core' )) . '</span>' );
-	return $link;
-}
 /**
  * Displays the comment author of an individual comment.
  *

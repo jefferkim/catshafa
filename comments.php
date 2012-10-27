@@ -18,17 +18,15 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 
 	<div class="comments-wrap">
 
-<?php comment_form(); // Loads the comment form. ?>
-
 		<div id="comments">
 
 			<?php if ( have_comments() ) : ?>
 
-				<?php //comments_number( __( 'No Responses', 'origin' ), __( 'One Response', 'origin' ), __( '% Responses', 'origin' ) ); ?>
+				<!-- <h3 id="comments-number" class="comments-header block-title"><span> --><?php //comments_number( __( 'No Responses', 'origin' ), __( 'One Response', 'origin' ), __( '% Responses', 'origin' ) ); ?><!-- </span></h3> -->
 
 				<?php do_atomic( 'before_comment_list' );// origin_before_comment_list ?>
 
-				<ol class="comment-list clearfix">
+				<ol class="comment-list">
 					<?php wp_list_comments( hybrid_list_comments_args() ); ?>
 				</ol><!-- .comment-list -->
 
@@ -58,7 +56,7 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 
 		</div><!-- #comments -->
 
-		
+		<?php comment_form(); // Loads the comment form. ?>
 
 	</div><!-- .comments-wrap -->
 

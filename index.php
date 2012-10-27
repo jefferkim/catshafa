@@ -14,7 +14,28 @@ get_header(); // Loads the header.php template. ?>
 
 	<?php do_atomic( 'before_content' ); // origin_before_content ?>	
 
-		<?php do_atomic( 'open_content' ); // origin_open_content ?>			
+		<?php do_atomic( 'open_content' ); // origin_open_content ?>	
+		
+		
+		    <div class="block home-post">
+		       
+		    
+		    </div>
+		    
+		    <div class="block home-download">
+		    
+		    </div>
+		    
+		    <div class="block home-platform">
+		    
+		    
+		    </div>
+		    
+		    <div class="block home-team">
+		    
+		    
+		    </div>
+				
              
 			<?php
 			if (have_posts ()) :
@@ -26,24 +47,28 @@ get_header(); // Loads the header.php template. ?>
 
 					<div id="post-<?php the_ID(); ?>"	class="<?php hybrid_entry_class(); ?>">										
 							
-					    
+						
+					   <?php echo get_avatar($post->post_author,50);?>
 									
 					   <?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>								
                            
-					   <?php echo apply_atomic_shortcode( 'byline', '<div class="post-meta">' . __( ' [entry-published]  [entry-terms taxonomy="category" before=""] [entry-comments-link] [entry-edit-link before=" &middot; "]', 'origin' ) . '</div>' ); ?>
-	         
-					    <?php //the_views();?>
+					   <?php echo apply_atomic_shortcode( 'byline', '<div class="post-meta">' . __( 'by [entry-author] Date [entry-published] About [entry-terms taxonomy="category" before=""] [entry-comments-link] [entry-edit-link before=" &middot; "]', 'origin' ) . '</div>' ); ?>
 	
 					   <div class="entry-summary">
 							
-						 <?php do_atomic( 'open_entry' ); // origin_open_entry ?>					    
-							
-					     <?php the_content(); ?>
+						 <?php do_atomic( 'open_entry' ); // origin_open_entry ?>
+
+											
+					  	 <?php if (has_post_thumbnail()):  ?>
+                             <?php the_post_thumbnail(); ?>
+                         <?php endif; ?>
+                            
+					    <?php the_content(); ?>
 								
-						<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'origin' ), 'after' => '</p>')); ?>
+						<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'origin' ), 'after' => '</p>' ) ); ?>
 						
 						
-						<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta"><a class="post-more-link" href="' . get_permalink() . '">' . __( '阅读全文', hybrid_get_textdomain() ) . '</a></div>' ); ?>
+						<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta"><a class="post-more-link" href="' . get_permalink() . '">' . __( '阅读更多', hybrid_get_textdomain() ) . '</a></div>' ); ?>
 									
 					 </div>
 

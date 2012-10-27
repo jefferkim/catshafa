@@ -13,19 +13,18 @@
 	global $post, $comment;
 ?>
 
-	<li id="comment-<?php comment_ID(); ?>" class="<?php hybrid_comment_class(); ?> clearfix">
+	<li id="comment-<?php comment_ID(); ?>" class="<?php hybrid_comment_class(); ?>">
 
 		<?php do_atomic( 'before_comment' ); // origin_before_comment ?>
 		
 
 			<?php do_atomic( 'open_comment' ); // origin_open_comment ?>
-			<div class="comment-author-time">
+			
 			
 			<?php echo apply_atomic_shortcode( 'comment_meta', '[comment-author]' ); ?>
 
-            <?php echo apply_atomic_shortcode( 'comment_meta', '<div class="published">[comment-block-published] </div>' ); ?>
-          
-          </div>
+
+
 			<div class="comment-content comment-text clearfix">
 				
 				<?php if ( '0' == $comment->comment_approved ) : ?>
@@ -40,7 +39,7 @@
 			</div><!-- .comment-content .comment-text -->
 			
 			
-			 
+			 <?php echo apply_atomic_shortcode( 'comment_meta', '<div class="published">[comment-published] </div>' ); ?>
 
 			<?php do_atomic( 'close_comment' ); // origin_close_comment ?>
 

@@ -17,7 +17,7 @@ get_header(); // Loads the header.php template. ?>
 
 		<?php do_atomic( 'open_content' ); // origin_open_content ?>
 
-     
+
 		<div class="hfeed">
 
 			<?php if ( have_posts() ) : ?>

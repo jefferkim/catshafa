@@ -93,7 +93,7 @@ class Hybrid_Widget_Categories extends WP_Widget {
 
 		/* If 'list' is the user-selected style, wrap the categories in an unordered list. */
 		if ( 'list' == $args['style'] )
-			$categories = '<ul class="categories">' . $categories . '</ul>';
+			$categories = '<ul class="xoxo categories">' . $categories . '</ul><!-- .xoxo .categories -->';
 
 		/* Output the categories list. */
 		echo $categories;

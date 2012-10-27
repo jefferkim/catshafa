@@ -1,9 +1,11 @@
 /**
- * Theme Name: xux
- * Theme URI: http://xux.etao.com/
- * Description: xux	
- * Version: V1.0	
+ * Theme Name: eato-ux
+ * Theme URI: http://mued.etao.com/
+ * Description: this theme is for etao moblie
+ * Version: 1.0
  * Author: jinijanfeng
+ * Author URI: http://etao.com
+ * Tags: etao moblie ued ux
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
@@ -38,12 +40,26 @@ html {
 	-ms-text-size-adjust: 100%;
 }
 
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section
+	{
+	display: block;
+}
+
+audio,canvas,video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
 body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td
 	{
 	margin: 0;
 	padding: 0;
 }
 
+body,button,input,select,textarea {
+	font: 12px/1.5 tahoma, arial, "Microsoft Yahei", "微软雅黑";
+}
 
 h1,h2,h3,h4,h5,h6 {
 	font-size: 100%;
@@ -57,6 +73,7 @@ code,kbd,pre,samp {
 	font-family: courier new, courier, monospace;
 }
 
+
 ul,ol {
 	list-style: none;
 }
@@ -69,25 +86,21 @@ a:hover {
 	text-decoration: underline;
 }
 
-#main{
-	
+button,input,select,textarea {
+	font-size: 100%;
 }
 
-aside{
-	float:left;
-	width:152px;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 
 
-.w950 {
-	width: 950px;
-}
+
+
 
 .col-main {
-	float: left;
-	width: 100%;
-	min-height: 1px;
 }
 
 .col-sub,.col-extra {
@@ -144,14 +157,8 @@ abbr[title] {
 }  /* End hide from IE-mac */
 
 
-blockquote,blockquote blockquote blockquote {
-	overflow: hidden;
-	padding: 0 0 0 40px;
-	font-size: 1.153846153846154em; /* 15 / 13 = 1.153846153846154 */
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-style: italic;
-	color: #aaa;
-	background: url(images/quote.png) no-repeat 0 4px;
+ul li,ol li {
+	line-height: 2.1em;
 }
 
 code {
@@ -171,5 +178,93 @@ pre code {
 	background: transparent;
 }
 
+body {
+	background:url(images/bg.png) repeat scroll 0 0;
+}
+header{
+	width:100%;
+	background:#ffffff;
+}
+
+#header{
+	width:1260px;
+	height:74px;	
+	margin:0 auto;
+	
+}
 
 
+#main{
+	width:1260px;
+	margin:0 auto;
+}
+
+
+#site-title{
+	float:left;
+	margin:17px 0 0 144px;
+	display:inline;
+	width:82px;
+	height:41px;
+	text-indent:-9999px;
+	background:url(images/logo.png) no-repeat scroll 0 0;
+}
+nav{
+	margin-top:23px;
+	float:left;
+	width:610px;
+	
+}
+nav ul{
+	height:32px;
+}
+nav li{
+	margin-left:65px;
+	float:left;
+	width:90px;
+	height:32px;
+	text-align:center;
+	
+}
+nav li.blog{
+	margin-left:28px;
+}
+nav li a{
+	margin:0 auto;
+	display:inline-block;
+	height:32px;
+	font-size:18px;
+	line-height:32px;
+	font-weight:600;
+	color:#aaaaaa;
+}
+nav li a:hover{
+	border-bottom:2px solid #cddff1;
+}
+
+.block{
+	position:relative;
+}
+
+.banner-block{
+	width:1260px;
+	height:597px;
+	background:url(images/banner.png) no-repeat scroll 0 0;
+}
+
+.home-post{
+	height:797px;
+	padding-top:12px;
+	background:#697e9c url(images/block1.png) repeat-x scroll 0 0;
+}
+
+.home-download{
+	height:678px;
+	padding-top:12px;
+	background:#729f64 url(images/block2.png) repeat-x scroll 0 0;
+}
+.home-platform{
+	height:694px;
+	padding-top:12px;
+	background:#d3a56d url(images/block3.png) repeat-x scroll 0 0;
+}
