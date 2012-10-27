@@ -345,3 +345,11 @@ nav li a:hover{
 	background:url(images/li_bg.png) no-repeat scroll 0 0;
 	
 }
+.home-platform .download-pic{
+	position:absolute;
+	left:750px;
+    top:250px;
+	width:320px;
+	height:188px;
+	background:url(images/platform-pic.png) no-repeat scroll 0 0;
+}

@@ -43,10 +43,9 @@ get_header(); // Loads the header.php template. ?>
 		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>
 		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>
 		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>
-		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>
-		            
+		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>		            
 		            </ul>
-		        
+		            <div class="download-pic"></div>        
 		        
 		        </div>
 		    
