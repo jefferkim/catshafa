@@ -355,6 +355,7 @@ nav li a:hover{
 }
 
 .post{
+	margin-top:20px;
 	width:934px;
 	padding:18px 28px;
 	border-radius:4px;
@@ -429,15 +430,22 @@ nav li a:hover{
 .categories{
 	
 }
-.categories li{
+.categories .cat-item{
+	margin:8px 0 0 4px;
+	float:left;
+	width:211px;
+}
+.categories .children .cat-item{
 	float:left;
 	margin-left:7px;
 	width:55px;
 	height:55px;
+	background:red;
 }
 
 
 aside{
+	margin-top:20px;
 	float:left;
 	width:211px;
 }
@@ -466,6 +474,63 @@ aside .return-btn em{
 	border-right:26px solid #697e9c;
 }
 
+.widget-bookmarks{
+	margin-top:30px;
+	width:180px;	
+}
+.widget-bookmarks .widget-title{
+	height:30px;
+	font-size:14px;
+	font-weight:normal;
+	color:#666;
+}
+.widget-bookmarks .blogroll{
+	margin-top:10px;
+	padding:10px 13px;
+	width:154px;
+	background:#dedede;
+	border-radius:4px;
+}
+.widget-bookmarks .blogroll li{
+	
+	height:30px;
+	
+}
+.widget-bookmarks .blogroll li a{
+	color:#666;
+	line-height:30px;
+	font-size:12px;
+}
+
+
+.entry-meta{
+	position:relative;
+	margin-top:20px;
+	width:100%;
+	height:40px;	
+}
+.entry-meta .post-more-link{
+	float:left;
+	font-size:18px;
+	width:74px;	
+	height:32px;
+	line-height:32px;
+	color:#367ec7;
+    border-bottom:2px solid #cddff1;
+}
+.entry-meta .comments-link{
+	display:block;
+	width:56px;
+	height:31px;
+	line-height:33px;
+	text-align:center;
+	position:absolute;
+	left:81px;
+	top:0;
+	color:#4d4d4d;
+	font-size:14px;
+	background:url(images/comment.png) no-repeat scroll 0 0;
+}
 /*文章分类*/
 .archive article{
 	float:left;

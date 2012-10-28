@@ -49,7 +49,7 @@ get_header(); // Loads the header.php template. ?>
 				    <?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'origin' ), 'after' => '</p>' ) ); ?>
 				
 				
-				    <?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta"><a class="post-more-link" href="' . get_permalink() . '">' . __( '阅读更多', hybrid_get_textdomain() ) . '</a></div>' ); ?>
+				    <?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta"><a class="post-more-link" href="' . get_permalink() . '">' . __( '阅读更多', hybrid_get_textdomain() ) . '</a>[entry-comments-link]</div>' ); ?>
 				
 				</div>
 				
