@@ -21,9 +21,52 @@ get_header(); // Loads the header.php template. ?>
 		
 		
 		    <div class="block home-post">
-		        <h2>1.博文</h2>
+		        <h2 class="title">1.博文</h2>
 		        <div class="block-c">
 		           <div class="home-post-pic"></div>
+		        
+		           <?php
+			if (have_posts ()) :
+		     $i = 0			   
+				?>
+              
+			  <?php while ( have_posts() ) : the_post(); ?>	
+
+				<?php do_atomic( 'before_entry' ); // origin_before_entry ?>
+
+					<div id="post-<?php the_ID(); ?>"	class="post-item post-item<?php echo $i;?>">
+						
+					   <div class="post-item-hd">	
+					      <?php echo get_avatar($post->post_author,50);?>		
+					      <?php echo apply_atomic_shortcode( 'byline', '<div class="post-meta">' . __( '[entry-author] [entry-terms taxonomy="category" before=""]  [entry-edit-link before=" &middot; "]', 'origin' ) . '</div>' ); ?>							
+					      <?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>					      
+	                   </div>
+	                   
+					   <div class="post-item-summary">
+							
+						 <?php do_atomic( 'open_entry' ); // origin_open_entry ?>
+                            
+					    <div class="post-item-c"><em></em><?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 150,'…');  ?></div>
+								
+											
+					 </div>
+
+					<?php do_atomic( 'close_entry' ); // origin_close_entry ?>
+
+				</div>
+
+				<?php do_atomic( 'after_entry' ); // origin_after_entry ?>
+				
+               <?php $i++;?>
+			<?php endwhile; ?>
+
+		<?php else : ?>
+
+			<?php get_template_part( 'loop-error' ); // Loads the loop-error.php template. ?>
+
+		<?php endif; ?>
+		        
+		        
 		        
 		        </div>
 		    
@@ -60,57 +103,9 @@ get_header(); // Loads the header.php template. ?>
 		    </div>
 				
              
-			<?php
-			if (have_posts ()) :
-				?>
-
-			  <?php while ( have_posts() ) : the_post(); ?>
-
-				<?php do_atomic( 'before_entry' ); // origin_before_entry ?>
-
-					<div id="post-<?php the_ID(); ?>"	class="<?php hybrid_entry_class(); ?>">										
-							
-						
-					   <?php echo get_avatar($post->post_author,50);?>
-									
-					   <?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>								
-                           
-					   <?php echo apply_atomic_shortcode( 'byline', '<div class="post-meta">' . __( 'by [entry-author] Date [entry-published] About [entry-terms taxonomy="category" before=""] [entry-comments-link] [entry-edit-link before=" &middot; "]', 'origin' ) . '</div>' ); ?>
-	
-					   <div class="entry-summary">
-							
-						 <?php do_atomic( 'open_entry' ); // origin_open_entry ?>
-
-											
-					  	 <?php if (has_post_thumbnail()):  ?>
-                             <?php the_post_thumbnail(); ?>
-                         <?php endif; ?>
-                            
-					    <?php the_content(); ?>
-								
-						<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'origin' ), 'after' => '</p>' ) ); ?>
-						
-						
-						<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta"><a class="post-more-link" href="' . get_permalink() . '">' . __( '阅读更多', hybrid_get_textdomain() ) . '</a></div>' ); ?>
-									
-					 </div>
-
-					<?php do_atomic( 'close_entry' ); // origin_close_entry ?>
-
-				</div>
-
-				<?php do_atomic( 'after_entry' ); // origin_after_entry ?>
-
-			<?php endwhile; ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'loop-error' ); // Loads the loop-error.php template. ?>
-
-		<?php endif; ?>
 			
-			<!-- loop nav for etao -->
-		<?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
+			
+			
            
       </article>           
 		

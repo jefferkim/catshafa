@@ -268,7 +268,7 @@ nav li a:hover{
 	padding-top:12px;
 	background:#697e9c url(images/block1.png) repeat-x scroll 0 0;
 }
-.home-post h2{ 
+.home-post h2.title{ 
 	left:147px;
     top:80px;   
     width:208px;
@@ -395,6 +395,7 @@ nav li a:hover{
 	height:72px;
 	z-index:1;    
 }
+
 .post-hd .post-title{
 	height:28px;
 	line-height:28px;
@@ -438,8 +439,20 @@ nav li a:hover{
 .categories .children .cat-item{
 	float:left;
 	margin-left:7px;
+	width:59px;
+	height:59px;
+	
+}
+.categories .children .cat-item a{
+	display:block;
+	padding:2px;
 	width:55px;
 	height:55px;
+	text-align:center;
+	line-height:55px;
+	font-size:18px;
+	color:#ffffff;
+	font-weight:700;
 	background:red;
 }
 
@@ -532,11 +545,204 @@ aside .return-btn em{
 	background:url(images/comment.png) no-repeat scroll 0 0;
 }
 /*文章分类*/
-.archive article{
+article{
 	float:left;
 	width:990px;
 	
 	
+}
+.home article{
+	width:100%;
+}
+.singular .comment-list .comment{
+	margin-top:22px;
+	width:702px;
+}
+.singular .comment-author{
+	padding-left:14px;
+	width:688px;
+    height:22px;
+    line-height:22px;
+    font-size:14px;
+    color:#333333;
+    background-position:-10px -894px;                        
+}
+
+.singular .comment-content{
+	line-height:28px;	
+}
+.singular .comment-content .moderation{
+	color:#d74a38;
+}
+
+.singular .published .comment-date{
+	color:#999999;
+}
+
+#respond{
+	margin-top:45px;
+}
+#reply-title{
+	font-size:24px;
+	font-weight:700;
+	color:#d84a38;
+}
+
+.post-item{
+	position:absolute;
+	width:306px;
+	height:227px;
+}
+.post-item .post-item-hd{
+	position:relative;
+	padding-left:90px;
+	width:216px;
+	height:87px;
+	
+	
+}
+
+.post-item .post-item-hd .avatar{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.post-item .post-item-hd .post-title{
+	height:46px;
+	text-indent:0;
+	
+}
+.post-item .post-item-hd .post-title a{
+	line-height:24px;
+	font-size:14px;
+	color:#fff;
+	font-weight:normal;
+	
+}
+
+.post-item .post-meta{
+	height:20px;
+	margin:10px 0;
+}
+
+.post-item .post-item-hd .author{
+	float:left;
+    padding-right:12px;
+	border-right:1px solid #525f72;
+}
+.post-item .post-item-hd .author a{
+	font-size:18px;
+	color:#fffee5;
+}
+.post-item .post-item-hd .category{
+	float:left;
+	padding-left:13px;
+	border-left:1px solid #313132;
+}
+.post-item .post-item-hd .category a{
+	font-size:18px;
+	color:#92a8c9;
+	
+}
+.post-item .post-item-summary{
+	padding-top:10px;
+}
+.post-item .post-item-c{
+	position:relative;	
+	width:280px;
+	height:105px;
+	padding:25px 10px 10px 10px;
+	font-size:14px;
+	line-height:24px;
+	color:#cbcebb;
+	border-radius:4px;
+	background:#53637b;
+}
+.post-item .post-item-c em{
+	position:absolute;
+	left:16px;
+	top:-20px;
+	width:0;
+	height:0;
+	border:11px solid transparent;
+	border-bottom:9px solid #53637b;
+}
+
+.post-item0{
+	left:324px;
+	top:208px;
+}
+.post-item1{
+	left:710px;
+	top:152px;
+}
+.post-item2{
+	left:425px;
+	top:503px;
+}
+
+
+
+
+
+#respond .form-author,#respond .form-email{
+	height:30px;
+	position:relative;
+	margin-top:20px;
+}
+#respond .form-author input,#respond .form-email input{		
+	padding-left:35px;
+	height:28px;
+	width:215px;
+	border:1px solid #cccccc;
+}
+#respond .form-author label,#respond .form-email label{
+	display:block;
+	width:35px;
+	height:30px;
+	line-height:30px;
+	position:absolute;
+	text-align:right;
+	color:#999999;
+	left:0;
+	top:0;
+}
+
+#respond .form-submit{
+	height:30px;
+	margin-top:20px;
+}
+
+#respond .form-submit input{
+	width:80px;
+	height:28px;
+	line-hegiht:28px;
+	border:none;
+	color:#ffffff;
+	font-size:14px;
+	font-weight:700;
+	cursor:pointer;
+	background-position:-10px -1100px;
+}
+#respond .form-textarea{
+	margin-top:20px;
+}
+
+.loop-nav{
+	margin-top:58px;
+	width:100%;
+	height:67px;
+	background:#fff;	
+}
+.loop-nav .nav-c{
+	width:400px;
+	margin:0 auto;
+}
+.loop-nav a{
+	margin-left:85px;
+	font-size:24px;
+	line-height:67px;
+	color:#367ec7;
 }
 /*不同分类下不同元素*/
 /*交互*/
@@ -563,6 +769,22 @@ aside .return-btn em{
 /*其他*/
 .other{
 	
+}
+
+footer{
+	margin:45px auto 20px auto;
+	width:610px;
+	height:80px;
+	text-align:center;
+}
+footer .moblie-ux{
+	font-size:18px;
+	line-height:40px;
+	color:#999999;
+}
+footer .copyright{
+	font-size:14px;
+	color:#999999;
 }
 
 

@@ -13,7 +13,6 @@ get_header(); // Loads the header.php template. ?>
 
 	<?php do_atomic( 'before_content' ); // origin_before_content ?>
 
-	
 		<?php do_atomic( 'open_content' ); // origin_open_content ?>
 		
 
@@ -25,12 +24,13 @@ get_header(); // Loads the header.php template. ?>
 
 					<div id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">
 															
-						<?php echo get_avatar($post->post_author,50);?>	
-									
-					   <?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>								
-                           
-					   <?php echo apply_atomic_shortcode( 'byline', '<div class="post-meta">' . __( 'by [entry-author] Date [entry-published] About [entry-terms taxonomy="category" before=""] [entry-comments-link] [entry-edit-link before=" &middot; "]', 'origin' ) . '</div>' ); ?>
-	
+						 <div class="post-hd">
+						      <div class="avatar-box"><div class="mask"></div><?php echo get_avatar($post->post_author,75);?></div>
+						
+						      <?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
+						
+						      <?php echo apply_atomic_shortcode( 'byline', '<div class="post-meta">' . __( 'Form[entry-author][entry-published]', 'origin' ) . '</div>' ); ?>
+						   </div>
 					   <div class="entry-summary">
 							
 						 <?php do_atomic( 'open_entry' ); // origin_open_entry ?>
@@ -45,16 +45,13 @@ get_header(); // Loads the header.php template. ?>
 
 					<?php get_sidebar( 'after-singular' ); // Loads the sidebar-after-singular.php template. ?>
 
-					<?php do_atomic( 'after_singular' ); // origin_after_singular ?>
-					
-					
-					<?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
-
-					
-					
+					<?php do_atomic( 'after_singular' ); // origin_after_singular ?>	
+								
 					
 					
 					<?php comments_template( '/comments.php', true ); // Loads the comments.php template. ?>
+					
+					</div>
 
 				<?php endwhile; ?>
 
@@ -65,7 +62,7 @@ get_header(); // Loads the header.php template. ?>
 		<?php do_atomic( 'close_content' ); // origin_close_content ?>
 
 		
-
+<?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
 	</article><!-- #content -->
 
 	<?php do_atomic( 'after_content' ); // origin_after_content ?>

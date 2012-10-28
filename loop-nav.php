@@ -10,6 +10,7 @@
  */
 ?>
 
+		
 	<?php if ( is_attachment() ) : ?>
 
 		<div class="loop-nav">
@@ -19,9 +20,11 @@
 	<?php elseif ( is_singular( 'post' ) ) : ?>
 
 		<div class="loop-nav clearfix">
-			<?php previous_post_link( '<div class="previous">' . __( '<span>上一篇</span> %link', 'origin' ) . '</div>', '%title' ); ?>
-			<?php next_post_link( '<div class="next">' . __( '%link', 'origin' ) . ' <span>下一篇</span></div>', '%title' ); ?>
-		</div><!-- .loop-nav -->
+		   <div class="nav-c">
+			 <?php previous_post_link( '%link', '<span class="previous">' . __( '上一篇', 'origin' ) . '</span>' ); ?>
+			 <?php next_post_link( '%link', '<span class="next">' . __( '下一篇', 'origin' ) . '</span>' ); ?>
+		   </div>
+		</div>
 
 	<?php elseif ( !is_singular() && current_theme_supports( 'loop-pagination' ) ) : loop_pagination(); ?>
 

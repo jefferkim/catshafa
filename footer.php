@@ -40,9 +40,9 @@
 		
 	    <?php do_atomic( 'open_footer' ); // trending_open_footer ?>
 			
-			<p class="moblie-ux">moblie ux</p>
+			<p class="moblie-ux">©一淘UX, All rights reserved.</p>
 			     
-            <p class="copyright">Copyright © 2012 ETAO MOBLIE UX. All rights reserved</p>            
+            <p class="copyright">转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，商业媒体及纸媒请先联系</p>            
 				
 			<?php echo apply_atomic_shortcode( 'footer_content', hybrid_get_setting( 'footer_insert' ) ); ?>
 			
@@ -54,16 +54,7 @@
 		<script src="http://a.tbcdn.cn/??s/kissy/1.2.0/kissy-min.js,s/kissy/1.2.0/switchable-min.js" type="text/javascript"></script>
 		
 		<script>
-		KISSY.use("switchable",
-		   function(S) {
-		    var b = new S.Slide("#J_slide", {
-		        contentCls: "slide-list",
-		        navCls: "slide-trigger",
-		        effect: "scrollx",
-		        easing: "easeOutStrong",
-		        interval: 3
-			 })
-		});
+		
 		</script>
 		<?php endif;?>
 		</footer>
