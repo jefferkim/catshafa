@@ -14,14 +14,10 @@
 
 
 
-				<?php get_sidebar( 'primary' ); // Loads the sidebar-primary.php template. ?>
+				
 
 
-               <!-- secondary:A widget area loaded in the footer of the site 
-                    n. 副手；代理人
-                    adj. 第二的；中等的；次要的；中级的
-                                                      要去掉
-                                                      
+               <!--                                                      
                                                        在libs/functions/sidebars.php中 有包含after-content ， before-content 等函数                                    
                -->
 				<?php //get_sidebar( 'secondary' ); // Loads the sidebar-secondary.php template. ?>
@@ -30,7 +26,8 @@
 
 				<?php do_atomic( 'close_main' ); // trending_close_main ?>			
 
-		</div><!-- #main -->
+		</div>
+
 
 		<?php do_atomic( 'after_main' ); // trending_after_main ?>
 

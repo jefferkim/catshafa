@@ -16,7 +16,10 @@ if ( is_active_sidebar( 'primary' ) ) : ?>
 	<div id="sidebar-primary" class="sidebar">
 
 		<?php do_atomic( 'open_sidebar_primary' ); // origin_open_sidebar_primary ?>
+          
+        <div class="return-btn"><em></em><a href="#" class="return">返回</a></div>
 
+      
 		<?php dynamic_sidebar( 'primary' ); ?>
 
 		<?php do_atomic( 'close_sidebar_primary' ); // origin_close_sidebar_primary ?>

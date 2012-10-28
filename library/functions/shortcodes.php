@@ -226,7 +226,7 @@ function hybrid_entry_edit_link_shortcode( $attr ) {
 function hybrid_entry_published_shortcode( $attr ) {
 	$attr = shortcode_atts( array( 'before' => '', 'after' => '', 'format' => get_option( 'date_format' ) ), $attr );
 
-	$published = '<abbr class="published" title="' . sprintf( get_the_time( esc_attr__( 'l, F jS, Y, g:i a', 'hybrid-core' ) ) ) . '">' . sprintf( get_the_time( $attr['format'] ) ) . '</abbr>';
+	$published = '<span class="published" title="' . sprintf( get_the_time( esc_attr__( 'l, F jS, Y, g:i a', 'hybrid-core' ) ) ) . '">' . sprintf( get_the_time( $attr['format'] ) ) . '</span>';
 	return $attr['before'] . $published . $attr['after'];
 }
 
@@ -271,7 +271,7 @@ function hybrid_entry_comments_link_shortcode( $attr ) {
  */
 function hybrid_entry_author_shortcode( $attr ) {
 	$attr = shortcode_atts( array( 'before' => '', 'after' => '' ), $attr );
-	$author = '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author_meta( 'display_name' ) ) . '">' . get_the_author_meta( 'display_name' ) . '</a></span>';
+	$author = '<span class="author vcard"><a class="url" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author_meta( 'display_name' ) ) . '">' . get_the_author_meta( 'display_name' ) . '</a></span>';
 	return $attr['before'] . $author . $attr['after'];
 }
 

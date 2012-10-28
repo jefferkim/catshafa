@@ -13,7 +13,6 @@ get_header(); // Loads the header.php template. ?>
 
 	<?php do_atomic( 'before_content' ); // origin_before_content ?>
 
-	
 
 		<?php do_atomic( 'open_content' ); // origin_open_content ?>
 

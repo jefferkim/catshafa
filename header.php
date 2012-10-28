@@ -53,10 +53,14 @@
 	   endif;?>
      
   <div id="main" class="clearfix">
-        <div id="banner" class="banner-block">
-		   
-		
-		</div>
+        
+        
+  <?php if(!is_home()):?>    
+	<aside>
+	<?php get_sidebar( 'primary' ); // Loads the sidebar-primary.php template. ?>
+	</aside>   
+  <?php endif;?>      
+        
      <article>   
 	
 	  <?php do_atomic( 'before_main' ); // origin_before_main ?>	  

@@ -353,3 +353,152 @@ nav li a:hover{
 	height:188px;
 	background:url(images/platform-pic.png) no-repeat scroll 0 0;
 }
+
+.post{
+	width:934px;
+	padding:18px 28px;
+	border-radius:4px;
+	background:#ffffff;
+	
+}
+
+
+
+.post-hd{
+	position:relative;
+	padding:12px 0 0 92px;
+	height:72px;
+}
+.post-hd .avatar-box{
+	position:absolute;
+    left:0;
+    top:0;
+	width:72px;
+	height:72px;
+	
+}
+.post-hd .mask{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:2;
+	width:72px;
+	height:72px;
+	background:url(images/avatar1.png) no-repeat scroll 0 0;
+}
+.post-hd .avatar{
+	position:absolute;
+	left:0;
+	top:0;
+	width:72px;
+	height:72px;
+	z-index:1;    
+}
+.post-hd .post-title{
+	height:28px;
+	line-height:28px;
+	font-size:18px;
+}
+.post-hd .post-title a{
+	font-size:18px;
+	color:#666666;
+	font-weight:600;
+}
+.post-hd .post-meta{
+	color:#666;
+}
+.post-hd .post-meta .author{
+	font-size:14px;
+	color:#666;
+	
+}
+.post-hd .post-meta .author a{
+	margin-left:15px;
+	color:#666;
+}
+.post-hd .post-meta .published{
+	margin-left:8px;
+	font-size:14px;
+	color:#666;
+}
+.post .entry-summary{
+	font-size:14px;
+	color:#666;
+}
+
+.categories{
+	
+}
+.categories li{
+	float:left;
+	margin-left:7px;
+	width:55px;
+	height:55px;
+}
+
+
+aside{
+	float:left;
+	width:211px;
+}
+aside .return-btn{
+	position:relative;
+	width:211px;
+	height:90px;
+	
+}
+aside .return-btn .return{
+	display:block;	
+	width:185px;
+	height:90px;
+	text-indent:-9999px;
+	overflow:hidden;
+	background:#697e9c url(images/return-btn.png) no-repeat scroll 13px 10px;
+}
+
+aside .return-btn em{
+	position:absolute;
+	left:-71px;
+	top:0;
+	width:0;
+	height:0;
+	border:45px solid transparent;
+	border-right:26px solid #697e9c;
+}
+
+/*文章分类*/
+.archive article{
+	float:left;
+	width:990px;
+	
+	
+}
+/*不同分类下不同元素*/
+/*交互*/
+.jiaohu{
+	
+}
+
+/*设计*/
+.sheji{
+	
+}
+/*前端*/
+.qianduan{
+	
+}
+/*用研*/
+.yongyan{
+	
+}
+/*团建*/
+.tuanjian{
+	
+}
+/*其他*/
+.other{
+	
+}
+
+
+
