@@ -86,10 +86,11 @@ get_header(); // Loads the header.php template. ?>
 		        <h2>3.平台化</h2>
 		        <div class="block-c">
 		            <ul class="download-list">
-		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>
-		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>
-		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>
-		               <li><img src="http://127.0.0.1/wordpress/wp-content/themes/xux/_tmp/1.png"/></li>		            
+		                 <?php
+							$dl = get_downloads('limit=5&orderby=hits&order=desc');							 
+							if (!empty($dl)) { foreach($dl as $d) { ?>
+		                   <li><img src="<?php echo $d->thumbnail?>"/></li>	            
+		                 <?php }} ?>
 		            </ul>
 		            <div class="download-pic"></div>        
 		        

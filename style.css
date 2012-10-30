@@ -186,7 +186,7 @@ header{
 	left:0;
 	top:0;
 	width:100%;
-	z-index:2;
+	z-index:20;
 	background:#ffffff;
 }
 
@@ -344,6 +344,10 @@ nav li a:hover{
 	margin:20px 0 0 77px;
 	background:url(images/li_bg.png) no-repeat scroll 0 0;
 	
+}
+.home-platform .download-list li img{
+	width:200px;
+	height:140px;
 }
 .home-platform .download-pic{
 	position:absolute;
@@ -595,6 +599,10 @@ aside .return-btn em{
 	color:#4d4d4d;
 	font-size:14px;
 	background:url(images/comment.png) no-repeat scroll 0 0;
+}
+
+.entry-meta .no-comment{
+	font-size:10px;
 }
 /*文章分类*/
 article{
