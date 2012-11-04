@@ -25,9 +25,11 @@ get_header(); // Loads the header.php template. ?>
 		        <div class="block-c">
 		           <div class="home-post-pic"></div>
 		        
-		           <?php
-			if (have_posts ()) :
-		     $i = 0			   
+		         <?php    
+			            
+				    query_posts('showposts=3');			
+				    if (have_posts ()) :
+				    $i = 0			   
 				?>
               
 			  <?php while ( have_posts() ) : the_post(); ?>	
@@ -37,7 +39,10 @@ get_header(); // Loads the header.php template. ?>
 					<div id="post-<?php the_ID(); ?>"	class="post-item post-item<?php echo $i;?>">
 						
 					   <div class="post-item-hd">	
-					      <?php echo get_avatar($post->post_author,50);?>		
+					      <div class="avatar-box">
+					          <span class="avatar-mask"></span>
+					          <?php echo get_avatar($post->post_author,72);?>
+					      </div>		
 					      <?php echo apply_atomic_shortcode( 'byline', '<div class="post-meta">' . __( '[entry-author] [entry-terms taxonomy="category" before=""]  [entry-edit-link before=" &middot; "]', 'origin' ) . '</div>' ); ?>							
 					      <?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>					      
 	                   </div>
@@ -89,6 +94,7 @@ get_header(); // Loads the header.php template. ?>
 		                 <?php
 							$dl = get_downloads('limit=5&orderby=hits&order=desc');							 
 							if (!empty($dl)) { foreach($dl as $d) { ?>
+
 		                   <li><img src="<?php echo $d->thumbnail?>"/></li>	            
 		                 <?php }} ?>
 		            </ul>
