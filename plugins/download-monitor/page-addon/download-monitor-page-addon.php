@@ -212,10 +212,14 @@ if (function_exists('get_downloads')) {
 	if (isset($_REQUEST['dlsearch'])) 
 		$dlsearch = esc_attr( $_REQUEST['dlsearch'] );
 	
-	$page .= '<div id="download-page">
-		<form id="download-page-search" action="" method="post">
+	/*$page .= '<div id="download-page">'.
+	      '<form id="download-page-search" action="" method="post">
 			<p><label for="dlsearch">'.$search_text.'</label> <input type="text" name="dlsearch" id="dlsearch" value="'.$dlsearch.'" /><input class="search_submit" type="submit" value="'.$search_submit_text.'" />'.$fields.'</p></form>';
-		
+    */
+	$page .= '<div id="download-page">';
+	
+	
+	
 	if (isset($dlsearch) && !empty($dlsearch)) {
 	
 		##########################################################################################################################################################################################
@@ -286,12 +290,15 @@ if (function_exists('get_downloads')) {
 					)
 				AND $wp_dlm_db.id NOT IN (".implode(',',$exclude_array).")
 				$orderby $paged_query;" );			
-			
+
+	    /*循环下载列表*/
 		if (!empty($downloads)) {
 		    $page .= '<ul>';
 		    foreach($downloads as $d) {
+		    	
 		        $page .= '<li>'.do_shortcode('[download id="'.$d->id.'" format="'.htmlspecialchars(str_replace('{url}',wp_dlmp_append_url('did=').'{id}',$format)).'"]').'</li>';
 		    }
+		    
 		   $page .= '</ul>';
 		   
 			// Show Pagination				       
@@ -892,6 +899,7 @@ function wp_dlmp_shortcode_download_page( $atts ) {
 	), $atts));
 	
 	$output = wp_dlmp_output($base_heading_level, $pop_count, $pop_cat_count, $show_uncategorized, $per_page, $format, $exclude, $exclude_cat, $show_tags, $default_order, $front_order);
+
 	return $output;
 
 }

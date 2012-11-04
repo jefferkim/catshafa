@@ -204,6 +204,9 @@ header{
 	margin:74px auto 0 auto;
 	z-index:1;
 }
+.home #main{
+	width:100%;
+}
 
 
 #site-title{
@@ -255,12 +258,19 @@ nav li a:hover{
 	position:absolute;
 	text-indent:-9999px;
 }
+
 .banner-block{
+	margin:0 auto;
 	width:1260px;
 	height:597px;
 	background:url(images/banner.png) no-repeat scroll 0 0;
 }
 
+.block-wrap{
+	position:relative;
+	width:1260px;
+	margin:0 auto;
+}
 
 
 .home-post{
@@ -357,6 +367,37 @@ nav li a:hover{
 	height:188px;
 	background:url(images/platform-pic.png) no-repeat scroll 0 0;
 }
+
+
+.home-team{
+	height:698px;
+	padding-top:12px;
+	background:#525252 url(images/block4.png) repeat-x scroll 0 0;
+}
+.home-team h2{
+	left:146px;
+	top:80px;
+	width:220px;
+	height:82px;
+	background:url(images/team-title.png) no-repeat scroll 0 0;
+}
+.home-team .team-pic{
+	position:absolute;
+	left:78px;
+    top:223px;
+	width:246px;
+	height:418px;
+	background:url(images/team-pic.png) no-repeat scroll 0 0;
+}
+.home-team .team-pic2{
+	position:absolute;
+	left:365px;
+	top:176px;
+	width:861px;
+	height:328px;
+	background:url(images/team-pic2.png) no-repeat scroll 0 0;
+}
+
 
 .post{
 	margin-top:20px;
@@ -743,6 +784,53 @@ article{
 	border:11px solid transparent;
 	border-bottom:9px solid #53637b;
 }
+.all-btn{
+	position:absolute;
+	left:829px;
+	top:488px;
+	display:block;
+	width:262px;
+	height:78px;
+	line-height:78px;
+	text-indent:38px;
+	font-size:24px;
+	background:url(images/icon-t.png) no-repeat scroll 0 -20px;
+}
+.all-btn em{
+	position:absolute;
+	left:211px;
+	top:23px;
+	display:block;
+	width:19px;
+	height:30px;
+	background:url(images/icon-t.png) no-repeat scroll 0 0;
+}
+
+.home-post-btn{
+	color:#3a5b89;
+}
+.home-post-btn em{
+	background-position:0 -150px;
+}
+.home-download-btn{
+	color:#44a835;
+}
+.home-download-btn em{
+	background-position:0 -250px;
+}
+.home-platform-btn{
+	color:#ea8d48;
+}
+.home-platform-btn em{
+	background-position:0 -350px;
+}
+.home-team-btn{
+	color:#565656;
+}
+.home-team-btn em{
+	background-position:0 -440px;
+}
+
 
 .post-item0{
 	left:324px;

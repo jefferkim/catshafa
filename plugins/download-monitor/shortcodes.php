@@ -127,6 +127,9 @@ function wp_dlm_shortcode_download( $atts ) {
 
 }
 
+   
+
+    /*下载的add_shortcode*/
 	add_shortcode('download', 'wp_dlm_shortcode_download');
 }
 ################################################################################
@@ -195,10 +198,7 @@ function wp_dlm_shortcode_downloads( $atts ) {
 	extract(shortcode_atts(array(
 		'query' => 'limit=5&orderby=rand',
 		'format' => '0',
-		'autop' => false,
-		'wrap' => 'ul',
-		'before' => '<li>',
-		'after' => '</li>'
+		'autop' => false
 	), $atts));
 	
 	$query = str_replace('&#038;','&', $query);
@@ -225,7 +225,13 @@ function wp_dlm_shortcode_downloads( $atts ) {
 			}
 		}	
 		if (empty($format) || $format=='0') {
-			$format = '<a class="downloadlink" href="{url}" title="{version,"'.__("Version","wp-download_monitor").'", ""} '.__("downloaded","wp-download_monitor").' {hits} '.__("times","wp-download_monitor").'" >{title} ({hits})</a>';		
+			
+			
+			
+			//$format = '<a class="downloadlink" href="{url}" title="{version,"'.__("Version","wp-download_monitor").'", ""} '.__("downloaded","wp-download_monitor").' {hits} '.__("times","wp-download_monitor").'" >{title} ({hits})</a>';
+
+			
+		      $format = '<img src=""/><div class="download-c">{hits}</div><a href="{url}" class="download-now">下载</a><span>{title}</span>	';
 			
 		}
 		
@@ -233,23 +239,23 @@ function wp_dlm_shortcode_downloads( $atts ) {
 
 		foreach ($dl as $d) {
 			
-			$d->prep_download_data($format);
+			//$d->prep_download_data($format);
 			
-			$fpatts = $d->patts;
-				
-			$fsubs	= $d->subs;
-	
-			$output .= html_entity_decode($before).str_replace( $fpatts , $fsubs , $format ).html_entity_decode($after);
+			$output .= '<li><img class="thumbnail"  src="'.$d->thumbnail.'"/>'.
+			           '<div class="download-desc"><span class="t">'.$d->title.'</span><span class="author">'.$d->user.'</span><span class="download-num">'.$d->hits.'</span></div>'.
+			           '<a href="'.$d->filename.'" class="download-now">下载</a><h3>'.$d->title.'</h3>'.
+			           '<div class="entry">格式：'.$d->subs[15].'  大小：'.$d->size.$d->date.'</div>'.
+			           '</li>';
+			
+			//$output .= html_entity_decode($before).str_replace( $fpatts , $fsubs , $format ).html_entity_decode($after);
 			
    		} 
 	
 	} else $output = html_entity_decode($before).'['.__("No Downloads found","wp-download_monitor").']'.html_entity_decode($after);	
 	
-	if ( $wrap == 'ul' ) {
-		$output = '<ul class="dlm_download_list">' . $output . '</ul>';
-	} elseif ( ! empty( $wrap ) ) {
-		$output = '<' . $wrap . '>' . $output . '</' . $wrap . '>';
-	}
+	
+     $output = '<div class="download-wrap clearfix"><ul class="dlm_download_list">' . $output . '</ul></div>';
+	
 	
 	if ($autop) return wpautop(do_shortcode($output));
 	return do_shortcode($output);
