@@ -218,6 +218,11 @@ header{
 	text-indent:-9999px;
 	background:url(images/logo.png) no-repeat scroll 0 0;
 }
+#site-title a{
+	display:block;
+	width:82px;
+	height:41px;
+}
 nav{
 	margin-top:23px;
 	float:left;
@@ -948,7 +953,7 @@ article{
 
 .dlm_download_list li{
 	float:left;
-	margin-left:75px;
+	margin:60px 0 0 75px;
 	position:relative;
 	width:240px;
 	height:200px;
@@ -958,15 +963,18 @@ article{
 	position:absolute;
 	left:0;
 	top:0;
-	width:200px;
-	height:140px;
+	width:150px;
+	height:110px;
 	z-index:2;	
 	color:#fff;
+	background:#000;
+	opacity:0.8;
+	padding:30px 25px 0 25px;
 }
 .dlm_download_list li .download-desc .t{
 	display:block;
 	font-size:16px;
-	
+	line-height:26px;	
 }
 .dlm_download_list li .download-desc .author{
 	display:block;
@@ -987,9 +995,18 @@ article{
 	text-indent:-9999px;
 	background:url(images/d-icon.png) no-repeat scroll 0 0;
 }
+.dlm_download_list li h3{
+	font-size:16px;
+	color:#666666;
+	line-height:22px;
+}
 .dlm_download_list li .thumbnail{
 	width:200px;
 	height:140px;
+}
+
+.dlm_download_list li .entry{
+	color:#999999;
 }
 
 

@@ -17,7 +17,7 @@ if ( is_active_sidebar( 'primary' ) ) : ?>
 
 		<?php do_atomic( 'open_sidebar_primary' ); // origin_open_sidebar_primary ?>
           
-        <div class="return-btn"><em></em><a href="#" class="return">返回</a></div>
+        <div class="return-btn"><em></em><a href="<?php echo get_option('home'); ?>" class="return">返回</a></div>
 
       
 		<?php dynamic_sidebar( 'primary' ); ?>

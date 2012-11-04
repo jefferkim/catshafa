@@ -207,6 +207,8 @@ function wp_dlm_shortcode_downloads( $atts ) {
 
 	$dl = get_downloads($query);
 	
+	
+	
 	$output = '';
 
 	if (!empty($dl)) {		
@@ -240,11 +242,13 @@ function wp_dlm_shortcode_downloads( $atts ) {
 		foreach ($dl as $d) {
 			
 			//$d->prep_download_data($format);
+		// print_r($d);
+		//	echo date("Y-m-d",$d->date);
 			
 			$output .= '<li><img class="thumbnail"  src="'.$d->thumbnail.'"/>'.
-			           '<div class="download-desc"><span class="t">'.$d->title.'</span><span class="author">'.$d->user.'</span><span class="download-num">'.$d->hits.'</span></div>'.
-			           '<a href="'.$d->filename.'" class="download-now">下载</a><h3>'.$d->title.'</h3>'.
-			           '<div class="entry">格式：'.$d->subs[15].'  大小：'.$d->size.$d->date.'</div>'.
+			           '<div class="download-desc"><span class="t">'.$d->title.'</span><span class="author">作者：'.$d->user.'</span><span class="download-num">下载：'.$d->hits.'</span></div>'.
+			           '<a href="'.$d->url.'" class="download-now" target="_blank">下载</a><h3>'.$d->title.'</h3>'.
+			           '<div class="entry">格式：'.$d->subs[15].'  大小：'.$d->size." ".date("Y-m-d", strtotime($d->date)).'</div>'.
 			           '</li>';
 			
 			//$output .= html_entity_decode($before).str_replace( $fpatts , $fsubs , $format ).html_entity_decode($after);

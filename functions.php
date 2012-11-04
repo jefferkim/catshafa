@@ -40,7 +40,8 @@ function origin_theme_setup() {
 	add_theme_support( 'loop-pagination' );
 	add_theme_support( 'get-the-image' );
 	add_theme_support( 'cleaner-gallery' );
-	add_theme_support( 'breadcrumb-trail' );
+	
+	//add_theme_support( 'breadcrumb-trail' );
 
 	/* Add theme support for WordPress features. */
 	add_theme_support( 'automatic-feed-links' );
@@ -82,7 +83,7 @@ function origin_theme_setup() {
 	add_action( 'wp_head', 'origin_style_settings' );
 	
 	/* Add the breadcrumb trail just after the container is open. */
-	add_action( "{$prefix}_close_header", 'breadcrumb_trail' );
+//	add_action( "{$prefix}_close_header", 'breadcrumb_trail' );
 	
 	/* Breadcrumb trail arguments. */
 	add_filter( 'breadcrumb_trail_args', 'origin_breadcrumb_trail_args' );
