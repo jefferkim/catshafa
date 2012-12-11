@@ -42,22 +42,19 @@
 
 	<?php do_atomic( 'open_body' ); // origin_open_body ?>
 	
-	
-	
-	
-	
-	<?php if(is_home()): 
-	
-	    if(function_exists('wp_slider')): wp_slider('etao-ux '); endif; 
-      
-	   endif;?>
      
   <div id="main" class="clearfix">
         
         
   <?php if(!is_home()):?>    
 	<aside>
-	<?php get_sidebar( 'primary' ); // Loads the sidebar-primary.php template. ?>
+	 <?php if(is_page('download')):?>
+	    <?php get_sidebar( 'download' ); // Loads the sidebar-download.php template. ?>
+	 <?php else:?>
+	    <?php get_sidebar( 'primary' ); // Loads the sidebar-primary.php template. ?>
+	 <?php endif;?>
+	   
+	
 	</aside>   
   <?php endif;?>      
         

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package Origin
  * @subpackage Functions
@@ -21,6 +22,7 @@ add_action( 'after_setup_theme', 'origin_theme_setup' );
  * actions and filters.
  *
  */
+
 function origin_theme_setup() {
 
 	/* Get action/filter hook prefix. */
@@ -359,5 +361,25 @@ function origin_style_settings() {
 	echo "</style>\n";
 
 }
+
+
+//首页博文刷新
+function query_posts_ajax() {
+		
+	if ($_GET ['action'] == 'query_posts_ajax' && $_GET ['cat'] != '') {
+		$cat = $_GET ["cat"];
+		$args = array ('category' => $cat );
+		// 获取文章对象
+		$t = get_posts ($args);
+		
+		echo json_encode($t);
+		
+		die ();
+	}	
+
+}
+//add action to init 
+add_action ( 'init', 'query_posts_ajax' );
+
 
 ?>

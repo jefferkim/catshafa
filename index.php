@@ -85,7 +85,7 @@ get_header(); // Loads the header.php template. ?>
 		          <div class="home-download-icon"></div>
 		          <div class="home-download-pic"></div>
 		          
-		          <a href="?page_id=46" class="all-btn home-download-btn">查看全部博文<em></em></a>
+		          <a href="download/" class="all-btn home-download-btn">查看全部博文<em></em></a>
 		        </div>
 		       </div>
 		    </div>

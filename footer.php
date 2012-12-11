@@ -64,6 +64,20 @@
 	<?php do_atomic( 'close_body' ); // trending_close_body ?>
 
 	<?php wp_footer(); // wp_footer ?>
+	
+	<script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+	<script>
+	  /*KISSY.ajax({
+           url:"http://127.0.0.1/wordpress/?action=query_posts_ajax",
+           data:{"cat":1},
+           dataType:"json",
+           success:function(resp){
+              var posts = resp;
+              console.log(posts);
+           }
+	   })*/
+	
+	</script>
 
 </body>
 </html>
