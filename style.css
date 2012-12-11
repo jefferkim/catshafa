@@ -58,7 +58,7 @@ body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legen
 }
 
 body,button,input,select,textarea {
-	font: 12px/1.5 tahoma, arial, "Microsoft Yahei", "微软雅黑";
+	font: 12px/1.5 tahoma, arial, "Microsoft Yahei", "寰蒋闆呴粦";
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -481,7 +481,7 @@ nav li a:hover{
 
 
 
-/*分类*/
+/*鍒嗙被*/
 .categories{
 	margin-top:30px;
 	width:185px;
@@ -530,7 +530,6 @@ nav li a:hover{
 
 
 
-/*分类目录，后期更改名字*/
 .categories .cat-all em{
     
     background-position:-40px -50px;	
@@ -650,7 +649,7 @@ aside .return-btn em{
 .entry-meta .no-comment{
 	font-size:10px;
 }
-/*文章分类*/
+/*鏂囩珷鍒嗙被*/
 article{
 	float:left;
 	width:990px;
@@ -913,29 +912,29 @@ article{
 	line-height:67px;
 	color:#367ec7;
 }
-/*不同分类下不同元素*/
-/*交互*/
+/*涓嶅悓鍒嗙被涓嬩笉鍚屽厓绱�/
+/*浜や簰*/
 .jiaohu{
 	
 }
 
-/*设计*/
+/*璁捐*/
 .sheji{
 	
 }
-/*前端*/
+/*鍓嶇*/
 .qianduan{
 	
 }
-/*用研*/
+/*鐢ㄧ爺*/
 .yongyan{
 	
 }
-/*团建*/
+/*鍥㈠缓*/
 .tuanjian{
 	
 }
-/*其他*/
+/*鍏朵粬*/
 .other{
 	
 }

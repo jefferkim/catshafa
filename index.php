@@ -73,7 +73,7 @@ get_header(); // Loads the header.php template. ?>
 		<?php endif; ?>
 		        
 		        
-		         <a href="?cat=12" class="all-btn home-post-btn">查看全部博文<em></em></a>
+		         <a href="?cat=1" class="all-btn home-post-btn">查看全部博文<em></em></a>
 		        </div>
 		    </div>
 		  </div>
