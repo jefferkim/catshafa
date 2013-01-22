@@ -51,10 +51,18 @@
 			<?php do_atomic( 'close_footer' ); // trending_close_footer ?>
 		
 		<?php if(is_home()):?>
-		<script src="http://a.tbcdn.cn/??s/kissy/1.2.0/kissy-min.js,s/kissy/1.2.0/switchable-min.js" type="text/javascript"></script>
+		<script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js" type="text/javascript"></script>
 		
 		<script>
-		
+			/*KISSY.ajax({
+	        url:"http://127.0.0.1/wordpress/?action=query_posts_ajax",
+	        data:{"cat":1},
+	        dataType:"json",
+	        success:function(resp){
+	           var posts = resp;
+	           console.log(posts);
+	        }
+		   })*/
 		</script>
 		<?php endif;?>
 		</footer>
@@ -65,19 +73,6 @@
 
 	<?php wp_footer(); // wp_footer ?>
 	
-	<script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
-	<script>
-	  /*KISSY.ajax({
-           url:"http://127.0.0.1/wordpress/?action=query_posts_ajax",
-           data:{"cat":1},
-           dataType:"json",
-           success:function(resp){
-              var posts = resp;
-              console.log(posts);
-           }
-	   })*/
-	
-	</script>
 
 </body>
 </html>
