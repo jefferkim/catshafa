@@ -1,11 +1,11 @@
 /**
- * Theme Name: eato-ux
- * Theme URI: http://mued.etao.com/
+ * Theme Name: catshafa
+ * Theme URI: http://catshafa.com/
  * Description: this theme is for etao moblie
  * Version: 1.0
  * Author: jinijanfeng
- * Author URI: http://etao.com
- * Tags: etao moblie ued ux
+ * Author URI: http://catshafa.com
+ * Tags: catshafa
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
@@ -58,7 +58,7 @@ body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legen
 }
 
 body,button,input,select,textarea {
-	font: 12px/1.5 tahoma, arial, "Microsoft Yahei", "寰蒋闆呴粦";
+	font: 12px/1.5 tahoma, arial, "Microsoft Yahei";
 }
 
 h1,h2,h3,h4,h5,h6 {
