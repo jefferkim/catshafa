@@ -11,10 +11,8 @@
 
 get_header(); // Loads the header.php template. ?>
 
-<div id="banner" class="banner-block">
-		   
-		
-		</div>
+ 
+
 	<?php do_atomic( 'before_content' ); // origin_before_content ?>	
 
 		<?php do_atomic( 'open_content' ); // origin_open_content ?>	
@@ -77,51 +75,14 @@ get_header(); // Loads the header.php template. ?>
 		        </div>
 		    </div>
 		  </div>
-		    <!-- 资料下载 -->
-		    <div class="block home-download">
-		      <div class="block-wrap">
-		        <h2>2.资料下载</h2>
-		        <div class="block-c">
-		          <div class="home-download-icon"></div>
-		          <div class="home-download-pic"></div>
-		          
-		          <a href="download/" class="all-btn home-download-btn">查看全部博文<em></em></a>
-		        </div>
-		       </div>
-		    </div>
-		    <!-- 平台化  -->
-		    <div class="block home-platform">
-		       <div class="block-wrap">
-		        <h2>3.平台化</h2>
-		        <div class="block-c">
-		            <ul class="download-list">
-		                 <?php
-							$dl = get_downloads('limit=4&order=desc');							 
-							if (!empty($dl)) { foreach($dl as $d) { ?>
-		                    <li><a href="<?php echo $d->url?>" target="_blank"><img src="<?php echo $d->thumbnail?>"/></a></li>	            
-		                 <?php }} ?>
-		            </ul>
-		            <div class="download-pic"></div>        
-		        
-		        </div>
-		        <a href="download/" class="all-btn home-platform-btn">查看全部博文<em></em></a>
-		      </div>
-		    </div>
-		    <!-- 团队 -->
-		    <div class="block home-team">
-		       <div class="block-wrap">
-		         <h2>4.团队</h2>
-		         <div class="block-c">
-		            <div class="team-pic"></div>
-		            <div class="team-pic2"></div> 		            
-		            <a href="#" class="all-btn home-team-btn">查看全部博文<em></em></a>		         
-		         </div>
-		       </div>
-		    </div>
+		    
+		   
+
+		  
 			
 			
            
-      </article>           
+      </div>           
 		
 
 		<?php do_atomic( 'close_content' ); // origin_close_content ?>	
