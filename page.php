@@ -22,6 +22,8 @@ get_header(); // Loads the header.php template. ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
+				   
+
 					<?php do_atomic( 'before_entry' ); // origin_before_entry ?>
 
 					<div id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">

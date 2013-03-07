@@ -293,12 +293,26 @@ nav li a:hover{
 
 
 #post-list li{
+	margin-right:85px;
     width:212px;
     height:360px;
     float:left;
 
     
 }
+
+.post-item .post-title a{
+	font-size:16px;
+	color:#333333;
+}
+.post-item .attachment-post-thumbnail{
+	width:211px;
+}
+.post-item p{
+	font-size:12px;
+	color:#999999;
+}
+
 
 footer{
 	margin:45px auto 20px auto;

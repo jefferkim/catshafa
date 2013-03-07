@@ -17,8 +17,11 @@ get_header(); // Loads the header.php template. ?>
 
 		<?php do_atomic( 'open_content' ); // origin_open_content ?>	
 		    <ul id="post-list">
+             
              <?php if (have_posts ()) :?> 
+
 			  <?php while ( have_posts() ) : the_post(); ?>	
+
 
 				    <?php do_atomic( 'before_entry' ); // origin_before_entry ?>
 
@@ -29,8 +32,9 @@ get_header(); // Loads the header.php template. ?>
 					   
 	                   <?php do_atomic( 'open_entry' ); // origin_open_entry ?>
                         
+                       <?php the_post_thumbnail();?>
 
-					   <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 150,'');  //the desc of post?>
+					   <p><?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 64,'');  //the desc of post?></p>
 								
 											
 					 </li>
@@ -38,8 +42,9 @@ get_header(); // Loads the header.php template. ?>
 					<?php do_atomic( 'close_entry' ); // origin_close_entry ?>
 
 				    <?php do_atomic( 'after_entry' ); // origin_after_entry ?>
-                </ul>
-			  <?php endwhile;?>
+   			  <?php endwhile;?>
+   		    </ul>
+
 
 		<?php else : ?>
 
