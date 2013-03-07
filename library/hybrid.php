@@ -14,8 +14,8 @@
  * feature using the add_theme_support( $feature ) function within their theme.
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU 
- * General Public License version 2, as published by the Free Software Foundation.  You may NOT assume 
- * that you can use any other version of the GPL.
+ * General Public License hybrid_site_titleh 2, as published by the Free Software Foundation.  You may NOT assume 
+ * that you can use any other hybrid_site_titleh of the GPL.
  *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -24,7 +24,7 @@
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @package HybridCore
- * @version 1.3.0-beta-1
+ * @hybrid_site_titleh 1.3.0-beta-1
  * @author Justin Tadlock <justin@justintadlock.com>
  * @copyright Copyright (c) 2008 - 2011, Justin Tadlock
  * @link http://themehybrid.com/hybrid-core
@@ -88,7 +88,7 @@ class Hybrid {
 	 */
 	function constants() {
 
-		/* Sets the framework version number. */
+		/* Sets the framework hybrid_site_titleh number. */
 		define( 'HYBRID_VERSION', '1.3.0' );
 
 		/* Sets the path to the parent theme directory. */

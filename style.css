@@ -237,6 +237,24 @@ body {
 }
 
 
+.about-catshafa{
+	margin-left:102px;
+	width:141px;
+	font-size:12px;
+	color:#ffffff;
+
+}
+.about-catshafa p{
+	margin-top:28px;
+	line-height:28px;
+}
+
+
+#content{
+	width:957px;
+	float:left;
+}
+
 nav{
 	margin-top:23px;
 	float:left;
@@ -271,11 +289,15 @@ nav li a:hover{
 }
 
 
-article{
-	float:left;
-	width:990px;
-	
-	
+
+
+
+#post-list li{
+    width:212px;
+    height:360px;
+    float:left;
+
+    
 }
 
 footer{
