@@ -32,7 +32,7 @@ get_header(); // Loads the header.php template. ?>
 					   
 	                   <?php do_atomic( 'open_entry' ); // origin_open_entry ?>
                         
-                       <?php the_post_thumbnail();?>
+                       <a href="<?php echo get_permalink() ?>"><?php the_post_thumbnail();?></a>
 
 					   <p><?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 64,'');  //the desc of post?></p>
 								

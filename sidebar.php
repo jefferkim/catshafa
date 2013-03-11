@@ -1,9 +1,9 @@
 <div id="sidebar" >
 
 		<?php hybrid_site_title(); ?>                     
-		<nav>
+		<div id="nav">
 		   <?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
-		</nav>
+		</div>
 
 
 		<div class="widget">
@@ -25,8 +25,8 @@
             	<div class="avatar">
             		<img src="<?php echo get_bloginfo('template_directory')?>/images/catshafa1.png"/>
                 </div>
-                <h2>珊璞<a href="#">微博</a></h2>
-                <span>catshafa</span>
+                <h2>珊璞<a href="#" class="weibo-link">微博 ></a></h2>
+                <span class="e-name">catshafa</span>
                 <p>
 				淘宝移动交互设计师<br/>兼顾视觉与交互，奇思乱想，热情工作的好同学。
                 </p>

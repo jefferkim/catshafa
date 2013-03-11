@@ -206,6 +206,7 @@ body {
 /*search block for sidebar*/
 .search{
 	position:relative;
+	margin:40px 0 0 48px;
 	width:249px;
 	height:33px;
 }
@@ -218,8 +219,8 @@ body {
 }
 .search .search-submit{
 	position:absolute;
-	right:2px;
-	top:2px;
+	right:10px;
+	top:8px;
 	width:16px;
 	height:16px;
 	background:url(images/search-btn.png) no-repeat scroll 0 0;
@@ -231,27 +232,52 @@ body {
 
 
 #site-title{
+	margin:0 auto;
 	width:124px;
 	height:111px;
+	text-indent:-9999px;
 	background:url(images/logo.png) no-repeat scroll 0 0;
 }
+#site-title a{
 
+}
 
 .about-catshafa{
-	margin-left:102px;
+	margin:85px 0 0 102px;
 	width:141px;
 	font-size:12px;
 	color:#ffffff;
 
 }
+.about-catshafa h2{
+	height:25px;
+	font-size:18px;
+	color:#fff;
+}
+.about-catshafa h2 .weibo-link{
+	float:right;
+	margin-top:4px;
+	width:58px;
+	height:16px;
+	line-height:15px;
+	font-size:11px;
+	color:#c50a00;
+	text-align:center;
+	background:#940700;
+}
 .about-catshafa p{
 	margin-top:28px;
 	line-height:28px;
 }
+.about-catshafa .e-name{
+	font-size:12px;
+	color:#fff;
+}
 
 
 #content{
-	width:957px;
+	margin:60px 0 0 60px;
+	width:893px;
 	float:left;
 }
 

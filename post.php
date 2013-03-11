@@ -25,7 +25,7 @@ get_header(); // Loads the header.php template. ?>
 					<div id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">
 															
 						 <div class="post-hd">
-						      <div class="avatar-box"><div class="mask"></div><?php echo get_avatar($post->post_author,75);?></div>
+						      
 						
 						      <?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 						
