@@ -49,7 +49,7 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 			<?php elseif ( !comments_open() ) : ?>
 
 				<p class="comments-closed">
-					<?php _e( 'Comments are closed.', 'origin' ); ?>
+					<?php _e( '评论已关闭.', 'origin' ); ?>
 				</p><!-- .comments-closed -->
 
 			<?php endif; ?>

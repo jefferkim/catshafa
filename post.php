@@ -25,11 +25,9 @@ get_header(); // Loads the header.php template. ?>
 					<div id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">
 															
 						 <div class="post-hd">
-						      
-						
 						      <?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 						
-						      <?php echo apply_atomic_shortcode( 'byline', '<div class="post-meta">' . __( 'Form[entry-author][entry-published]', 'origin' ) . '</div>' ); ?>
+						      <?php //echo apply_atomic_shortcode( 'byline', '<div class="post-meta">' . __( 'Form[entry-author][entry-published]', 'origin' ) . '</div>' ); ?>
 						   </div>
 					   <div class="entry-summary">
 							
@@ -62,8 +60,8 @@ get_header(); // Loads the header.php template. ?>
 		<?php do_atomic( 'close_content' ); // origin_close_content ?>
 
 		
-<?php get_template_part( 'loop-nav' ); // Loads the loop-nav.php template. ?>
-	</article><!-- #content -->
+ 
+	</div>
 
 	<?php do_atomic( 'after_content' ); // origin_after_content ?>
 

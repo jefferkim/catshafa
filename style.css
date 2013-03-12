@@ -183,7 +183,7 @@ pre code {
 /* style block for themes*/
 
 body {
-	background:url(images/bg.png) repeat scroll 0 0;
+	
 }
 
 
@@ -232,18 +232,20 @@ body {
 
 
 #site-title{
-	margin:0 auto;
+	margin:58px auto 0 auto;
+	width:124px;
+	height:111px;
+}
+#site-title a{
+   display:block;
 	width:124px;
 	height:111px;
 	text-indent:-9999px;
 	background:url(images/logo.png) no-repeat scroll 0 0;
 }
-#site-title a{
-
-}
 
 .about-catshafa{
-	margin:85px 0 0 102px;
+	margin:85px 0 220px 102px;
 	width:141px;
 	font-size:12px;
 	color:#ffffff;
@@ -280,6 +282,8 @@ body {
 	width:893px;
 	float:left;
 }
+
+
 
 nav{
 	margin-top:23px;
@@ -339,6 +343,143 @@ nav li a:hover{
 	color:#999999;
 }
 
+
+.post .post-title{
+	font-size:24px;
+	color:#000000;
+}
+
+
+
+/*comment block*/
+
+
+.singular .comment-list .comment{
+	margin-top:40px;
+	width:702px;
+}
+
+.singular .comment-list .comment-author-time{
+	float:left;
+	width:85px;
+	background:url(images/icons2.png) no-repeat scroll right -576px;
+}
+
+.singular .comment-list .comment-author-time .comment-author{ 
+	font-size:18px;
+	color:#333333;	
+	                 
+}
+
+.singular .comment-content{
+	float:left;
+	margin-left:20px;
+	width:305px;
+	line-height:28px;	
+}
+.singular .comment-content .moderation{
+	color:#333333;
+}
+
+.singular .published .comment-date{
+	color:#aaaaaa;
+	font-size:11px;	
+}
+
+#respond{
+	margin-top:45px;
+	height:68px;
+}
+#reply-title{
+	font-size:24px;
+	font-weight:700;
+	color:#d84a38;
+}
+
+
+.post-comment-form{
+	float:left;
+	display:inline;	
+	width:560px;
+	height:64px;
+	border:1px solid #cecece;
+	border-radius:2px;
+	box-shadow:1px 1px 20px #ececec inset;
+}
+
+
+
+#respond .form-author,#respond .form-textarea{
+	position:relative;
+	float:left;
+	height:64px;
+	
+}
+#respond .form-author input,#respond .form-textarea textarea{		
+	height:64px;
+	border:none;
+	background:none;
+}
+
+#respond .form-author{
+	width:84px;
+	padding-left:10px;
+}
+
+#respond .form-author #author{
+	width:84px;
+}
+
+#respond .form-textarea #comment{
+	width:455px;
+	height:38px;
+	margin:10px 0 10px 10px;
+	line-height:15px;
+	resize:vertical;
+}
+#respond .form-author #author{
+	background:url(images/icons2.png) no-repeat scroll right -567px;
+}
+
+
+
+
+
+#respond .form-author label,#respond .form-textarea label{
+	position:absolute;
+	color:#c7c7c7;
+	left:15px;
+	top:15px;
+}
+
+#respond .form-submit{
+	margin-left:15px;
+	display:inline;
+	float:left;
+	width:102px;
+	
+}
+
+#respond .form-submit input{
+	width:100px;
+	height:65px;
+	line-hegiht:6px;
+	border:1px solid #dddddd;
+	border-radius:2px;
+	font-size:12px;
+	color:#5d8410;
+	cursor:pointer;
+	background:#f7f7f7 url(images/icons2.png) no-repeat scroll -12px -674px;
+}
+
+
+
+
+
+
+#reply-title{
+	display:none;
+}
 
 footer{
 	margin:45px auto 20px auto;
