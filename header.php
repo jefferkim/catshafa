@@ -6,9 +6,9 @@
 <link rel="shortcut icon" href="http://ux.etao.com/favicon.ico" />
 <title><?php hybrid_document_title(); ?></title>
 
-<!-- <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" 	type="text/css" /> -->
+<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" 	type="text/css" />
 
-<link rel="stylesheet" href="http://10.12.9.2/wordpress/wp-content/themes/catshafa/style.css" 	type="text/css" />
+<!-- <link rel="stylesheet" href="http://10.12.9.2/wordpress/wp-content/themes/catshafa/style.css" 	type="text/css" />-->
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
