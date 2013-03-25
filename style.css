@@ -357,6 +357,10 @@ nav li a:hover{
 /*comment block*/
 
 
+#comments-template{
+	background:#f2f2f2;
+}
+
 .singular .comment-list .comment{
 	margin-top:40px;
 	width:702px;
