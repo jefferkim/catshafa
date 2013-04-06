@@ -18,7 +18,7 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 
 	<div class="comments-wrap">
 
-		<div id="comments">
+		<div id="comments" class="clearfix">
 
 			<?php if ( have_comments() ) : ?>
 
@@ -26,7 +26,7 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 
 				<?php do_atomic( 'before_comment_list' );// origin_before_comment_list ?>
 
-				<ol class="comment-list">
+				<ol class="comment-list clearfix">
 					<?php wp_list_comments( hybrid_list_comments_args() ); ?>
 				</ol><!-- .comment-list -->
 

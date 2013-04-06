@@ -13,7 +13,7 @@
 	global $post, $comment;
 ?>
 
-	<li id="comment-<?php comment_ID(); ?>" class="<?php hybrid_comment_class(); ?>">
+	<li id="comment-<?php comment_ID(); ?>" class="<?php hybrid_comment_class(); ?> clearfix">
 
 		<?php do_atomic( 'before_comment' ); // origin_before_comment ?>
 		

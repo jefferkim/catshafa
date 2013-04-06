@@ -97,7 +97,26 @@ table {
 
 
 
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
 
+.clearfix {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}  /* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}  /* End hide from IE-mac */
 
 
 .col-main {
@@ -365,13 +384,43 @@ nav li a:hover{
 
 
 #comments-template{
+	margin-top:15px;
+	padding-left:37px;
 	background:#f2f2f2;
 }
-
-.singular .comment-list .comment{
-	margin-top:40px;
-	width:702px;
+#comments-template .comments{
 }
+#comments-template .comment{
+	position:relative;
+	padding-top:30px;
+	width:702px;
+    background:url(images/comment-sep.png) no-repeat scroll 132px 37px;
+  
+}
+#comments-template .comment-author{
+	float:left;
+	width:130px;
+	font-size:18px;
+	color:#333333;
+}
+
+#comments-template .comment-content{
+	float:right;
+	width:560px;
+	text-align:left;
+	line-height:28px;	
+}
+#comments-template .published{
+	position:absolute;
+	width:130px;
+    top:56px;
+}
+
+
+
+
+
+
 
 .singular .comment-list .comment-author-time{
 	float:left;
@@ -385,12 +434,7 @@ nav li a:hover{
 	                 
 }
 
-.singular .comment-content{
-	float:left;
-	margin-left:20px;
-	width:305px;
-	line-height:28px;	
-}
+
 .singular .comment-content .moderation{
 	color:#333333;
 }
