@@ -2,6 +2,7 @@
 
 		<?php hybrid_site_title(); ?>                     
 		<div id="nav">
+		   
 		   <?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
 		</div>
 
@@ -23,7 +24,7 @@
             <div class="about-catshafa">
 
             	<div class="avatar">
-            		<img src="<?php echo get_bloginfo('template_directory')?>/images/catshafa1.png"/>
+            		<img src="<?php echo get_bloginfo('template_directory')?>/images/catshafa.png"/>
                 </div>
                 <h2>珊璞<a href="#" class="weibo-link">微博 ></a></h2>
                 <span class="e-name">catshafa</span>

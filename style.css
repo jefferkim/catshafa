@@ -235,16 +235,23 @@ body {
 #site-title{
 	margin:58px auto 0 auto;
 	width:124px;
-	height:111px;
+	height:112px;
 }
 #site-title a{
    display:block;
 	width:124px;
-	height:111px;
+	height:122px;
 	text-indent:-9999px;
-	/*background:url(images/logo.png) no-repeat scroll 0 0;*/
-	background:url(images/logo.gif) no-repeat scroll 0 0;
+	background:url(images/sub-logo.png) no-repeat scroll 0 bottom;
 	
+}
+#site-title span{
+	display:block;
+    margin:0 0 0 16px;
+	width:86px;
+	height:86px;
+	
+	background:url(images/logo.gif) no-repeat scroll 0 0;	
 }
 
 .about-catshafa{
