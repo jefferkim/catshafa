@@ -32,6 +32,14 @@
 
 	<?php wp_footer(); // wp_footer ?>
 	
+<script type="text/javascript" src="<?php echo bloginfo( 'template_directory' );?>/js/jquery.min.js"></script>
+<script type="text/javascript">
+     setTimeout(function(){
+     	var logo = $("#site-title").find("span").addClass("change");
+     },3200);
+     
 
+
+</script>
 </body>
 </html>

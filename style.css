@@ -1,5 +1,5 @@
 /**
- * Theme Name: catshafa
+ * Theme Name: catshafa2
  * Theme URI: http://catshafa.com/
  * Description: this theme is for etao moblie
  * Version: 1.0
@@ -12,7 +12,9 @@
  * Copyright (c) 2011 - 2012.  All rights reserved.
  * 
  */
-
+.preload-img{
+	background:url(images/logo-2.png) no-repeat scroll 0 0;
+}
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section
 	{
 	display: block;
@@ -219,7 +221,7 @@ body {
 #sidebar{
 	width:230px;
 	float:left;	
-	background:#c50a00; 
+	background:#af1d00; 
 }
 
 /*search block for sidebar*/
@@ -271,6 +273,10 @@ body {
 	height:86px;
 	
 	background:url(images/logo.gif) no-repeat scroll 0 0;	
+}
+
+#site-title span.change{
+	background:url(images/logo-2.png) no-repeat scroll 0 0;
 }
 
 .about-catshafa{

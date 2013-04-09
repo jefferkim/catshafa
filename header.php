@@ -18,7 +18,7 @@
 
 <body class="<?php hybrid_body_class(); ?>">
     
-   	
+   	<span style="display:none;width:0;height:0;" class="preload-img"></span>
 
 
 	<?php do_atomic( 'open_body' ); // origin_open_body ?>
