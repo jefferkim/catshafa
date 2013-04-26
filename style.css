@@ -38,7 +38,7 @@ figure {
 html {
 	font-size: 1em; /* 16px */
 	overflow-y: scroll;
-	-webkit-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%.post-item .attachment-post-thumbnail;
 	-ms-text-size-adjust: 100%;
 }
 
@@ -372,6 +372,7 @@ nav li a:hover{
 }
 .post-item .attachment-post-thumbnail{
 	width:211px;
+	height:211px;
 }
 .post-item p{
 	font-size:12px;
