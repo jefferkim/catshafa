@@ -233,7 +233,7 @@ body {
 }
 
 .search .search-text{
-	width:190px;
+	width:180px;
 	height:33px;
 	background:#fff;
 	border:none;
@@ -241,7 +241,7 @@ body {
 }
 .search .search-submit{
 	position:absolute;
-	right:0;
+	right:10px;
 	top:8px;
 	width:16px;
 	height:16px;
@@ -281,7 +281,7 @@ body {
 
 .about-catshafa{
 	margin:85px auto 220px auto;
-	width:135px;
+	width:141px;
 	font-size:12px;
 	color:#ffffff;
 
