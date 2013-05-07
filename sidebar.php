@@ -26,7 +26,7 @@
             	<div class="avatar">
             		<img src="<?php echo get_bloginfo('template_directory')?>/images/catshafa.png"/>
                 </div>
-                <h2>珊璞<a href="#" class="weibo-link">微博 ></a></h2>
+                <h2>珊璞<a href="http://weibo.com/catshafa" target="_blank" class="weibo-link">微博 ></a></h2>
                 <span class="e-name">catshafa</span>
                 <p>
 				淘宝移动交互设计师<br/>兼顾视觉与交互，奇思乱想，热情工作的好同学。
