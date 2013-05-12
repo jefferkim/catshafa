@@ -61,7 +61,7 @@ get_header(); // Loads the header.php template. ?>
 
 		
  
-	</div>
+	
 
 	<?php do_atomic( 'after_content' ); // origin_after_content ?>
 

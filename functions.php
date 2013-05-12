@@ -243,6 +243,8 @@ function origin_comments_args( $args ) {
 
 /**
  *  Custom comment form arguments
+ *  
+ *  定制化评论
  * 
  */
 function origin_commentform_args( $args ) {
@@ -262,7 +264,8 @@ function origin_commentform_args( $args ) {
 	
 	$fields = array(
 		'author' => '<p class="form-author' . $input_class . '"><input type="text" class="text-input" name="author" id="author" value="' . esc_attr( $commenter['comment_author'] ) . '" size="40" /><label for="author">' . __( '昵称', $domain ). '</label></p>',
-		'email' => '<p class="form-email' . $input_class . '"><input type="text" class="text-input" name="email" id="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="40" /><label for="email">' . __( '邮箱', $domain ). '</label></p>'//,
+		//'email' => '<p class="form-email' . $input_class . '"><input type="text" class="text-input" name="email" id="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="40" /><label for="email">' . __( '邮箱', $domain ). '</label></p>',
+		'email' => '<p class="form-email' . $input_class . '"><input type="text" class="text-input" name="email" id="email" value="anonymous@catshafa.com" size="40" /><label for="email">' . __( '邮箱', $domain ). '</label></p>'//,
 		//'url' => '<p class="form-url"><input type="text" class="text-input" name="url" id="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="40" /><label for="url">' . __( 'Website', $domain ) . '</label></p>'
 	);
 	

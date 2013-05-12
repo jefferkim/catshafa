@@ -204,7 +204,7 @@ pre code {
 /* style block for themes*/
 
 body {
-	
+    overflow:hidden;	
 }
 
 
@@ -216,12 +216,13 @@ body {
 	
 	
 }
-
+#main{
+	background:#AF1D00;
+}
 
 #sidebar{
 	width:230px;
 	float:left;	
-	background:#af1d00; 
 }
 
 /*search block for sidebar*/
@@ -313,9 +314,19 @@ body {
 
 
 #content{
-	margin:60px 0 0 60px;
+	float:right;
+	width:100%;
+	padding:60px 0 0 60px;
+	margin-right:-290px;
+	background:#fff;
+	min-height:990px;
+	height:auto !important; 
+	height:990px; 
+	overflow:visible;
+}
+#content .c{
 	width:893px;
-	float:left;
+	
 }
 
 
@@ -396,6 +407,9 @@ nav li a:hover{
 	background:#f2f2f2;
 }
 #comments-template .comments{
+}
+#comments-template .form-email{
+	display:none;
 }
 #comments-template .comment{
 	position:relative;

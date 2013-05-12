@@ -28,9 +28,8 @@
      
   <div id="main" class="clearfix">
 
- <?php get_sidebar(); // Loads the sidebar.php template. ?>
-
-     <div id="content" class="clearfix">   
+     <div id="content" class="clearfix">  
+        <div class="c">
 	
 	  <?php do_atomic( 'before_main' ); // origin_before_main ?>	  
 
