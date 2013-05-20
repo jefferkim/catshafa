@@ -217,6 +217,14 @@ body {
 	
 }
 
+#main{
+	background:#AF1D00;
+}
+
+#sidebar{
+	width:230px;
+	float:left;	
+}
 
 #sidebar{
 	width:230px;
@@ -313,9 +321,19 @@ body {
 
 
 #content{
-	margin:60px 0 0 60px;
+	float:right;
+	width:100%;
+	padding:60px 0 0 60px;
+	margin-right:-290px;
+	background:#fff;
+	min-height:990px;
+	height:auto !important; 
+	height:990px; 
+	overflow:visible;
+}
+#content .c{
 	width:893px;
-	float:left;
+
 }
 
 
@@ -384,6 +402,11 @@ nav li a:hover{
 	font-size:24px;
 	color:#000000;
 }
+
+
+
+
+
 
 
 
@@ -554,3 +577,239 @@ footer{
 }
 
 
+
+
+
+
+/*markdown css*/
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+.post {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+
+/* BLOCKS
+=============================================================================*/
+
+.post p, .post blockquote, .post ul, .post ol, .post dl, .post table, .post pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+.post h1,.post  h2,.post  h3, .post h4, .post h5, .post h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+.post h1 tt, .post h1 code, .post h2 tt, .post h2 code, .post h3 tt, .post h3 code, .post h4 tt, .post h4 code, .post h5 tt, .post h5 code, .post h6 tt, .post h6 code {
+  font-size: inherit;
+}
+
+.post h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+.post h2 {
+  font-size: 24px;
+  color: #000;
+}
+
+.post h3 {
+  font-size: 18px;
+}
+
+.post h4 {
+  font-size: 16px;
+}
+
+.post h5 {
+  font-size: 14px;
+}
+
+.post h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+
+
+.post h1+p, .post h2+p, .post h3+p, .post h4+p, .post h5+p, .post h6+p {
+  margin-top: 10px;
+}
+
+
+
+/* LISTS
+=============================================================================*/
+
+.post ul, .post ol {
+  padding-left: 30px;
+}
+
+.post ul li > :first-child, 
+.post ol li > :first-child, 
+.post ul li ul:first-of-type, 
+.post ol li ol:first-of-type, 
+.post ul li ol:first-of-type, 
+.post ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+.post ul ul, .post ul ol, .post ol ol, .post ol ul {
+  margin-bottom: 0;
+}
+
+.post dl {
+  padding: 0;
+}
+
+.post dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+.post dl dt:first-child {
+  padding: 0;
+}
+
+.post dl dt>:first-child {
+  margin-top: 0px;
+}
+
+.post dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+.post dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+.post dl dd>:first-child {
+  margin-top: 0px;
+}
+
+.post dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+.post pre, .post code, .post tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+.post code, .post tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+.post pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+.post pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+.post pre code, .post pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+/* QUOTES
+=============================================================================*/
+
+.post blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+.post blockquote>:first-child {
+  margin-top: 0px;
+}
+
+.post blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+.post hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+.post table th {
+  font-weight: bold;
+}
+
+.post table th, .post table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+.post table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.post table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+.post img {
+  max-width: 100%
+}

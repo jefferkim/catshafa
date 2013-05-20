@@ -1,0 +1,1 @@
+[10-May-2013 15:04:10] PHP Fatal error:  Call to undefined function  get_header() in /home4/zhengcen/public_html/catshafa/wp-content/themes/catshafa2/index.php on line 12

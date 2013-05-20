@@ -12,10 +12,11 @@
  */
 ?>
 
-  <?php do_atomic( 'close_main' ); // trending_close_main ?>			
-
+  <?php do_atomic( 'close_main' ); // trending_close_main ?>	
+           </div>		
+        
 		</div>
-
+  <?php get_sidebar(); // Loads the sidebar.php template. ?>
 
 		<?php do_atomic( 'after_main' ); // trending_after_main ?>
 
@@ -34,9 +35,17 @@
 	
 <script type="text/javascript" src="<?php echo bloginfo( 'template_directory' );?>/js/jquery.min.js"></script>
 <script type="text/javascript">
+     var logo =$("#site-title").find("span");
+      var CLS = "change";
      setTimeout(function(){
-     	var logo = $("#site-title").find("span").addClass("change");
+    	 logo.addClass(CLS);
      },3200);
+     logo.on("mouseover mouseout",function(e){
+         var target = $(e.target);
+         e.type == "mouseover" ?  target.removeClass(CLS) : target.addClass(CLS); 
+     })
+
+     
      
 
 
