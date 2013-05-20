@@ -204,7 +204,7 @@ pre code {
 /* style block for themes*/
 
 body {
-	
+    overflow:hidden;	
 }
 
 
@@ -216,6 +216,7 @@ body {
 	
 	
 }
+<<<<<<< HEAD
 
 #main{
 	background:#AF1D00;
@@ -225,11 +226,13 @@ body {
 	width:230px;
 	float:left;	
 }
+#main{
+	background:#AF1D00;
+}
 
 #sidebar{
 	width:230px;
 	float:left;	
-	background:#af1d00; 
 }
 
 /*search block for sidebar*/
@@ -419,6 +422,9 @@ nav li a:hover{
 	background:#f2f2f2;
 }
 #comments-template .comments{
+}
+#comments-template .form-email{
+	display:none;
 }
 #comments-template .comment{
 	position:relative;
